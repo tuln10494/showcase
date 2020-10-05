@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar_active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tooBarControl"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_menu"
+                    android:stateListAnimator="@xml/scale_small"/>
+
+                <ImageView
+                    android:id="@+id/ic_round_chart"
+                    android:layout_width="@dimen/_32dp"
+                    android:layout_height="@dimen/_32dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_control"
+                    android:stateListAnimator="@xml/scale_small"
+                    android:tint="@color/white"/>
+
+                <ImageView
+                    android:paddingRight="@dimen/_18dp"
+                    android:paddingLeft="@dimen/_18dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_add"
+                    android:stateListAnimator="@xml/scale_small"
+                    android:tint="@color/white"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:text="@string/title_one"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_26sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:text="@string/content_one"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_14sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:text="@string/title_two"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_26sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:text="@string/content_two"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_14sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:text="@string/title_three"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_26sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginRight="@dimen/_18dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:text="@string/content_three"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_14sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_three"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
