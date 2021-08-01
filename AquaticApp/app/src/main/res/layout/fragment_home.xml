@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".homeFragment.HomeFragment">
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold"
+            tools:text="@string/user_name" />
+
+
+        <View
+            android:id="@+id/v_decoration_1"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp16"
+            android:background="@drawable/elipse_decoration" />
+
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp16"
+            android:gravity="center|start"
+            android:padding="8dp"
+            android:text="@string/quote"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/v_decoration_2"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/v_decoration_1"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/elipse_decoration" />
+
+        <View
+            android:id="@+id/vLogo"
+            android:layout_width="196dp"
+            android:layout_height="165dp"
+            android:layout_below="@id/tvUserName"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/logo_temp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_day"
+            android:elevation="4dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/rcDay"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/vLogo"
+            android:layout_marginTop="@dimen/dp16"
+       />
+
+        <TextView
+            android:id="@+id/tvDayChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcDay"
+            android:layout_marginStart="@dimen/dp16"
+            android:text="@string/today"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvDayChoose"
+            android:layout_margin="@dimen/dp16" />
+
+
+    </RelativeLayout>
+</layout>

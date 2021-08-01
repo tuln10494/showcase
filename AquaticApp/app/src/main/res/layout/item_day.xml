@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="50dp"
+    android:background="@color/white"
+    android:layout_height="70dp">
+
+    <LinearLayout
+        android:id="@+id/dayNormal"
+        android:layout_width="37dp"
+        android:layout_height="45dp"
+        android:background="@drawable/day_layout_nomal"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/text_8"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/tvDayInWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_10"
+            android:textStyle="bold"
+            tools:text="mon" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_8"
+            tools:text="jan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toDayLayout"
+        android:layout_width="37dp"
+        android:layout_height="66dp"
+        android:background="@drawable/to_day_layout_nomal"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNumberToDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/text_8"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/tvDayInWeekToDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_10"
+            android:textStyle="bold"
+            tools:text="mon" />
+
+        <TextView
+            android:id="@+id/tvMonthToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_8"
+            tools:text="jan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chooseDayLayout"
+        android:layout_width="37dp"
+        android:layout_height="66dp"
+        android:background="@drawable/choose_day_layout_nomal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNumberChooseDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/text_8"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/tvDayInWeekChooseDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_10"
+            android:textStyle="bold"
+            tools:text="mon" />
+
+        <TextView
+            android:id="@+id/tvMonthChooseday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_8"
+            tools:text="jan" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
