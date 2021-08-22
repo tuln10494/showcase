@@ -37,6 +37,6 @@
     <string name="err_msg_confirm_password_not_match">Please Match password and confirm password</string>
     //success msg
     <string name="msg_your_details_are_valid">Your details are valid.</string>
-    <string name="msg_your_register_successfully">You are registered successfully. Your user ID is %s</string>
+    <string name="msg_your_register_successfully">You are registered successfully.</string>
 
 </resources>

@@ -30,11 +30,21 @@ object DayName {
 }
 
 object SharePrefKey{
-    val EMAIL_LOGGED_IN = "EMAIL_LOGGED_IN"
+    const val EMAIL_LOGGED_IN = "EMAIL_LOGGED_IN"
+}
+
+object User{
+    const val MALE = 1
+    const val FEMALE = 0
+}
+
+object DatabaseCollectionName{
+    const val USERS = "users"
 }
 
 class Constant {
     companion object {
+        val HEAD_LOG = "Aquatic_app"
         fun getMonthName(monthNumber: String): String {
             return if (nameMonthsMap[monthNumber].isNullOrBlank()) "" else nameMonthsMap[monthNumber]!!
         }

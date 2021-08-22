@@ -3,10 +3,14 @@ package com.example.greenlightaquaticapp.activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import com.example.greenlightaquaticapp.R
 import com.example.greenlightaquaticapp.baseView.BaseActivity
+import com.example.greenlightaquaticapp.constants.Constant.Companion.HEAD_LOG
 import com.example.greenlightaquaticapp.constants.SharePrefKey.EMAIL_LOGGED_IN
+import com.example.greenlightaquaticapp.fireStore.FireStoreClass
+import com.example.greenlightaquaticapp.models.User
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
@@ -78,25 +82,26 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                     hideProgressDialog()
                     when {
                         task.isSuccessful -> {
-                            addEmailLoggedInToSharedPref(EMAIL_LOGGED_IN,email)
-                            showErrorSnackBar(resources.getString(R.string.login_success), false)
-                            startActivity(Intent(this,HomeActivity::class.java))
-                            finish()
+                            Log.d(HEAD_LOG, "login success")
+                            FireStoreClass().getCurrentUser(this)
                         }
                         task.isCanceled -> {
                             showErrorSnackBar(task.exception!!.message.toString(), true)
                         }
                         task.isComplete -> {
-                            showErrorSnackBar(
-                                resources.getString(R.string.already_login_success),
-                                false
-                            )
-                            startActivity(Intent(this,HomeActivity::class.java))
-                            finish()
+                            Log.d(HEAD_LOG, "login complete")
+                            FireStoreClass().getCurrentUser(this)
                         }
                     }
                 }
         }
+    }
+
+    fun userLoggedInSuccess(user: User) {
+        hideProgressDialog()
+        Log.d(HEAD_LOG, "get current user success ${user.email}")
+        startActivity(Intent(this, HomeActivity::class.java))
+        finish()
     }
 
 }

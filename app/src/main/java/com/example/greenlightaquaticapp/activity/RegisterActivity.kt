@@ -1,21 +1,31 @@
 package com.example.greenlightaquaticapp.activity
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import com.example.greenlightaquaticapp.R
 import com.example.greenlightaquaticapp.baseView.BaseActivity
+import com.example.greenlightaquaticapp.constants.Constant
+import com.example.greenlightaquaticapp.fireStore.FireStoreClass
+import com.example.greenlightaquaticapp.models.User
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), View.OnClickListener {
+    private lateinit var mContext: Context
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        mContext = this
+        Log.d(Constant.HEAD_LOG,"Registration Activity")
         setupActionBar()
         initView()
     }
@@ -97,7 +107,7 @@ class RegisterActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.tv_login -> {
-               onBackPressed()
+                onBackPressed()
             }
             R.id.btn_register -> {
                 if (validateRegisterDetails()) {
@@ -115,18 +125,17 @@ class RegisterActivity : BaseActivity(), View.OnClickListener {
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                     OnCompleteListener<AuthResult> { task ->
-                        hideProgressDialog()
                         if (task.isSuccessful) {
                             val firebaseUser = task.result!!.user!!
-                            showErrorSnackBar(
-                                resources.getString(
-                                    R.string.msg_your_register_successfully,
-                                    firebaseUser.uid
-                                ), false
+                            val user = User(
+                                firebaseUser.uid,
+                                edt_first_name.text.toString(),
+                                edt_last_name.text.toString(),
+                                edt_email_id.text.toString(),
                             )
-                            FirebaseAuth.getInstance().signOut()
-                            finish()
+                            FireStoreClass().registerUser(this@RegisterActivity, user)
                         } else {
+                            hideProgressDialog()
                             showErrorSnackBar(
                                 task.exception!!.message.toString(), true
                             )
@@ -134,5 +143,15 @@ class RegisterActivity : BaseActivity(), View.OnClickListener {
                     }
                 )
         }
+    }
+
+    fun userRegistrationSuccess() {
+        hideProgressDialog()
+        showToast(
+            mContext, resources.getString(
+                R.string.msg_your_register_successfully
+            )
+        )
+        finish()
     }
 }

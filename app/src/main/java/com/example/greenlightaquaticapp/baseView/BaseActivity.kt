@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.compose.ui.window.Dialog
 import androidx.core.content.ContextCompat
 import com.example.greenlightaquaticapp.R
@@ -66,5 +67,9 @@ open class BaseActivity : AppCompatActivity() {
             ?: return resources.getString(R.string.owner_name)
         return sharedPref.getString(key, resources.getString(R.string.owner_name)).toString()
 
+    }
+
+    fun showToast(context: Context,message: String){
+        Toast.makeText(context,message,Toast.LENGTH_LONG).show()
     }
 }
