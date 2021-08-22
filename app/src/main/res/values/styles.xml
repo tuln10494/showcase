@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_light_color</item>
+        <item name="android:colorPrimaryDark">@color/dark_green_light_color</item>
+        <item name="android:colorAccent">@color/blue_light_color</item>
+    </style>
+
+    <style name="Widget.Aquatic.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/dark_gray_light_color</item>
+        <item name="android:paddingBottom">@dimen/dp8</item>
+        <item name="boxStrokeColor">@color/dark_green_light_color</item>
+        <item name="hintTextAppearance">@style/Widget.Aquatic.TextInputLayout</item>
+    </style>
+
+    <style name="Widget.Aquatic.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/dark_gray_light_color</item>
+        <item name="backgroundTint">@color/dark_green_light_color</item>
+        <item name="android:radius">@dimen/dp8</item>
+    </style>
+
+    <style name="Widget.Aquatic.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/dark_gray_light_color</item>
+    </style>
+
+    <style name="TextAppearance.Aquatic.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_gray_light_color</item>
+    </style>
+</resources>

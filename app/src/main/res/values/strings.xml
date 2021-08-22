@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Green Light Aquatic</string>
+    <string name="owner_name">lntu10494@gmail.com.vn</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_developer">Hello Lê Tú</string>
+    <string name="quote">Easy Way To Note Your Tasks</string>
+    <string name="today">Today Plans</string>
+    <string name="user_name">User name</string>
+    <string name="login">Login</string>
+    <string name="submit">Submit</string>
+    <string name="create_account">Create Account</string>
+    <string name="register">Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password_message">Enter your e-mail address we\'ll sent your a email to reset your password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_agree">I Agree To The Terms &amp; Condition</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="please_wait">Please wait</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_success">You are logged in successfully.</string>
+    <string name="email_sent_to_reset_password_success">Email Sent successfully to reset your password!</string>
+    <string name="already_login_success">You are already logged in successfully.</string>
+    <string name="do_not_have_an_account">Don\'t have an account?</string>
+
+    //error msg
+    <string name="err_msg_enter_username">Please enter user name.</string>
+    <string name="err_msg_enter_first_name">Please enter first name.</string>
+    <string name="err_msg_enter_last_name">Please enter last name.</string>
+    <string name="err_msg_enter_email_id">Please enter email ID.</string>
+    <string name="err_msg_enter_email_id_type">Please enter email ID correct.</string>
+    <string name="err_msg_enter_password">Please enter password</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password</string>
+    <string name="err_msg_agree_terms_and_condition">Please agree The Terms &amp; Condition</string>
+    <string name="err_msg_confirm_password_not_match">Please Match password and confirm password</string>
+    //success msg
+    <string name="msg_your_details_are_valid">Your details are valid.</string>
+    <string name="msg_your_register_successfully">You are registered successfully. Your user ID is %s</string>
+
+</resources>

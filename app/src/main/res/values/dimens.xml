@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_8">8sp</dimen>
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="tool_bar_title_text_size">16sp</dimen>
+
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp64">64dp</dimen>
+
+    <dimen name="click_able_view_padding">5dp</dimen>
+
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_text_margin">50dp</dimen>
+
+
+
+</resources>
